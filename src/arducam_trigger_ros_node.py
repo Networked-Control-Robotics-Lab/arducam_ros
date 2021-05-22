@@ -137,8 +137,8 @@ pass
 
 def write_register(request):
     global handle
-    register = request.register
-    value = request.value
+    register = request.reg
+    value = request.val
     rtn_val = ArducamSDK.Py_ArduCam_writeSensorReg(handle,register,value)
     if rtn_val == 0:
         output = 'Value %d written to register %d' % (value, register)
@@ -148,7 +148,7 @@ def write_register(request):
 
 def read_register(request):
     global handle
-    register = request.register
+    register = request.reg
     rtn_val, output = ArducamSDK.Py_ArduCam_readSensorReg(handle,register)
     if rtn_val == 0:
         output = 'Register %d: %d' % (register, output)

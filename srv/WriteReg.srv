@@ -1,4 +1,4 @@
-uint64 register
-uint64 value
+uint64 reg
+uint64 val
 ---
-string return_value
+string retval
